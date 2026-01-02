@@ -57,4 +57,4 @@ It demonstrates **CRUD operations**, **file uploads**, **checkbox handling**, **
 ├── db.sql # Database schema
 ├── README.md # Documentation
 
-```
+``` 

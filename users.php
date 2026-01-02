@@ -166,7 +166,15 @@ $catRes = mysqli_query($conn, "SELECT * FROM category");
                                     <td>
                                         <?php
                                         $ids = explode(",", $u['hobby_id']);
-                                        foreach ($ids as $i) echo ($hobbyData[$i] ?? '') . " ";
+                                        $names = [];
+
+                                        foreach ($ids as $i) {
+                                            if (isset($hobbyData[$i])) {
+                                                $names[] = $hobbyData[$i];
+                                            }
+                                        }
+
+                                        echo implode(", ", $names);
                                         ?>
                                     </td>
                                     <td><?= $u['category'] ?></td>
